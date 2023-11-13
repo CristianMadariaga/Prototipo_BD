@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+body {
+    font-family: 'Istok Web', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1.5rem;
+
+    &:after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(117deg, #BE93C5 0%, #8F94FB 100%);
+        height: 100vh;
+        z-index: -1;
+    }
+}
+
+.login-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 15px 15px 20px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    width: 1200px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: auto auto;
+
+    a {
+        text-decoration: none;
+        color: aqua;
+    }
+}
+
+.column {
+    padding: 4rem;
+
+    &:first-child {
+        background: url(uft_sede.jpg) center;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        text-align: center;
+
+        &:after {
+            content: "";
+            position: absolute;
+            background: linear-gradient(180deg, white, #ffffff82);
+            inset: 0;
+        }
+    }
+    &:nth-child(2){
+        text-align: center;
+    }
+}
+form {
+    margin-top: 3rem;
+
+    &>* {
+        margin-top: 1rem;
+    }
+}
+button{
+    background: linear-gradient(90deg, #B06AB3 0%, #EC38BC 100%);
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all .2s;
+    opacity: .70;
+
+    &:active{
+        scale: .95;
+        background-color: darken(linear-gradient(90deg, #B06AB3 0%, #EC38BC 100%), 50%);
+    }
+    &:hover{
+        opacity: 100;
+    }
+}
+h1 {
+    margin-bottom: 15px;
+}
+.form-element{
+    width: 100%;
+    border: none;
+    background-color: #8F94FB;
+    padding: 20px 30px;
+    font-size: 18px;
+    border-radius: 35px;
+    transition: box-shadow .2s;
+
+    &:focus{
+        outline: none;
+        box-shadow: 0 0 0 2px black;
+    }
+}
+
+.form-checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    margin-left: 5px;
+}
+
+.flex {
+    display: flex;
+    justify-content:center;
+    align-content: center;
+}
+
+input[type=checkbox]{
+    accent-color: #8F94FB;
+    width: 16px;
+    height: 16px;
+}
+
+@media (max-width:992px) {
+    .login-card{
+        display: block;
+        width: 500px;
+        text-align: center;
+
+        .column{
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+    .flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+

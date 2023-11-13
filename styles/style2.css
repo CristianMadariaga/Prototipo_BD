@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+body {
+    font-family: 'Istok Web', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1.5rem;
+
+    &:after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(117deg, #BE93C5 0%, #8F94FB 100%);
+        height: 100vh;
+        z-index: -1;
+    }
+}
+
+.products {
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 15px 15px 20px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    width: 1200px;
+    height: 600px;
+    overflow: hidden;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 240px auto;
+}
+
+.column {
+    padding: 2rem;
+
+    &:first-child {
+        text-align: left;
+        background-color: #A8C0FF;
+    }
+    &:nth-child(2) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.item {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    text-align: center;
+    display: block;
+    width: 200px;
+    height: 250px;
+
+    &:hover{
+        scale: .98;
+    }
+}
+h2 {
+    margin-bottom: -5px;
+    font-weight: 600;
+}
+h3 {
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+h4 {
+    font-weight: 600;
+    margin-top: 20px;
+    &:hover{
+        color: #EC38BC;
+        font-size: 17px;
+    }
+}
+button{
+    background: linear-gradient(90deg, #B06AB3 0%, #EC38BC 100%);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all .2s;
+    opacity: .70;
+
+    &:active{
+        scale: .95;
+        background-color: darken(linear-gradient(90deg, #B06AB3 0%, #EC38BC 100%), 50%);
+    }
+    &:hover{
+        opacity: 100;
+    }
+}
+@media (max-width:992px) {
+    .products{
+        width: 500px;
+        text-align: center;
+    }
+    .column{
+        &:nth-child(2) {
+            display: block;
+            overflow: auto;
+        }
+    }
+    .item {
+        margin-top: 25px;
+    }
+}
