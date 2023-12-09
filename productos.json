@@ -1,0 +1,86 @@
+[
+{
+    "id": 1,
+    "nombre": "Papas Fritas",
+    "precio": 3150,
+    "imagen": "img/papasfritas.png",
+    "categoria": "Comestibles"
+},
+{
+    "id": 2,
+    "nombre": "Doritos",
+    "precio": 2990,
+    "imagen": "img/doritos.png",
+    "categoria": "Comestibles"
+},
+{
+    "id": 3,
+    "nombre": "Ramitas",
+    "precio": 1990,
+    "imagen": "img/ramitas.png",
+    "categoria": "Comestibles"
+},
+{
+    "id": 4,
+    "nombre": "Coca Cola",
+    "precio": 890,
+    "imagen": "img/coca.png",
+    "categoria": "Bebestibles"
+},
+{
+    "id": 5,
+    "nombre": "Pepsi",
+    "precio": 890,
+    "imagen": "img/pepsi.png",
+    "categoria": "Bebestibles"
+},
+{
+    "id": 6,
+    "nombre": "Polera",
+    "precio": 9990,
+    "imagen": "img/polera.png",
+    "categoria": "Ropa"
+},
+{
+    "id": 7,
+    "nombre": "Pantalón",
+    "precio": 15990,
+    "imagen": "img/pantalon.png",
+    "categoria": "Ropa"
+},
+{
+    "id": 8,
+    "nombre": "Calcetas",
+    "precio": 5990,
+    "imagen": "img/calcetines.png",
+    "categoria": "Ropa"
+},
+{
+    "id": 9,
+    "nombre": "Guantes",
+    "precio": 6790,
+    "imagen": "img/guantes.png",
+    "categoria": "Ropa"
+},
+{
+    "id": 10,
+    "nombre": "Audifonos",
+    "precio": 25690,
+    "imagen": "img/audifonos.png",
+    "categoria": "Electro"
+},
+{
+    "id": 11,
+    "nombre": "Cable",
+    "precio": 6990,
+    "imagen": "img/cable.png",
+    "categoria": "Electro"
+},
+{
+    "id": 12,
+    "nombre": "Tablet",
+    "precio": 199990,
+    "imagen": "img/tablet.png",
+    "categoria": "Electro"
+}
+]

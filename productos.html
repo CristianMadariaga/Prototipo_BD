@@ -6,45 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
     <link rel="stylesheet" href="styles/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
-    <div class="products">
+    <div class="products animate__animated animate__bounceIn">
         <div class="column">
             <h1>Categorías</h1>
-            <a href="" style="text-decoration:none">
-                <h4>Comestibles</h4>
-            </a>
-            <a href="bebestibles.html" style="text-decoration:none">
-                <h4>Bebestibles</h4>
-            </a>
-            <a href="ropa.html" style="text-decoration:none">
-                <h4>Ropa</h4>
-            </a>
-            <a href="electro.html" style="text-decoration:none">
-                <h4>Electro</h4>
-            </a>
+            <h4 onclick="filterDataHTML('Comestibles')">Comestibles</h4>
+            <h4 onclick="filterDataHTML('Bebestibles')">Bebestibles</h4>
+            <h4 onclick="filterDataHTML('Ropa')">Ropa</h4>
+            <h4 onclick="filterDataHTML('Electro')">Electro</h4>
+            <h4 onclick="filterDataHTML('Todo')">Todas</h4>
+            <td>
+                <div class="botones">
+                    <div class="icono_carrito">
+                        <img src="img/cart_icon.png" width="60px" height="60px">
+                    </div>
+                    <div class="total_carrito">0</div>
+                </div>
+            </td>
         </div>
         <div class="column">
-            <div class="item">
-                <img src="img/papasfritas.png" width="100px" height="100px">
-                <h2>Papas Fritas</h2>
-                <h3>$3.150</h3>
-                <button type="submit" class="button">Agregar</button>
-            </div>
-            <div class="item">
-                <img src="img/doritos.png" width="100px" height="100px" class="center">
-                <h2>Doritos</h2>
-                <h3>$2.990</h3>
-                <button type="submit" class="button">Agregar</button>
-            </div>
-            <div class="item">
-                <img src="img/ramitas.png" width="100px" height="100px" class="center">
-                <h2>Ramitas</h2>
-                <h3>$1.990</h3>
-                <button type="submit" class="button">Agregar</button>
-            </div>
+            <div id="productos" class="view_productos"></div>
         </div>
+    </div>
+    <div class="carrito">
+        <h2>Carrito</h2>
+        <div class="lista_carrito">
+        </div>
+        <div class="botones_carrito">
+            <div class="cerrar_carrito">Cerrar</div>
+            <div class="pagar">Pagar</div>
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
-
 </html>

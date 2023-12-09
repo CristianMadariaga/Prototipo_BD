@@ -1,0 +1,121 @@
+/* FORMATO DE LOS DISTINTOS HTML CON LOS PRODUCTOS POR CATEGORIA */
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+body{
+    font-family: 'Istok Web', sans-serif;
+    background-color: white;
+}
+
+/* Mostrar los productos desde otro HTML en html view */
+.view_productos{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 2rem;
+    overflow: hidden;
+}
+.view_productos::-webkit-scrollbar{
+    width: 0;
+}
+
+/* Muestra cada item desde una tarjeta de producto blanca */
+.item {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    text-align: center;
+    display: block;
+    width: 200px;
+    height: 250px;
+
+    &:hover{
+        scale: .98;
+    }
+}
+
+.productos{
+    margin-top: 0%;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Configuracion de fuentes de texto */
+h2 {
+    margin-bottom: -5px;
+    font-weight: 600;
+}
+h3 {
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+h4 {
+    font-weight: 600;
+    margin-top: 20px;
+    &:hover{
+        color: #EC38BC;
+        font-size: 17px;
+    }
+}
+
+/* Configurar boton para 'agregar item' */
+button{
+    background: linear-gradient(90deg, #B06AB3 0%, #EC38BC 100%);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all .2s;
+    opacity: .70;
+
+    &:active{
+        scale: .95;
+        background-color: darken(linear-gradient(90deg, #B06AB3 0%, #EC38BC 100%), 50%);
+    }
+    &:hover{
+        opacity: 100;
+    }
+}
+
+/*Para hacerlo responsive */
+@media (max-width:990px) {
+    .products{
+        width: 500px;
+        text-align: center;
+        grid-template-columns: 120px auto;
+    }
+    .column{
+        &:first-child{
+            display: block;
+            overflow: auto;
+        }
+
+        &:nth-child(2) {
+            display: block;
+            overflow: auto;
+        }
+    }
+    .item {
+        margin-top: 25px;
+    }
+    h4 {
+        font-size: 10px;
+        &:hover{
+            color: #EC38BC;
+            font-size: 11px;
+        }
+    }
+    h1 {
+        font-size: 15px;
+    }
+}
