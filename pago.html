@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pago</title>
     <link rel="stylesheet" href="styles/style3.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.botonPago').addEventListener('click', function () {
+                window.location.href = 'metodo_pago.html';
+            });
+        });
+    </script>
+</head>
+
 </head>
 <body>
     <div class="container">
@@ -24,6 +33,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="derecha">
                 <h1>PAGO</h1>
                 <div class="form">
@@ -45,6 +55,10 @@
                         <div>Cantidad Total</div>
                         <div class="cantidadTotal">60</div>
                     </div>
+                    <div class="fila">
+                        <div>Precio Total</div>
+                        <div class="precioTotal">$60</div>
+                    </div>
                 </div>
                 <button class="botonPago">Pagar</button>
             </div>
@@ -54,3 +68,4 @@
     <script src="checkout.js"></script>
 </body>
 </html>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método de Pago</title>
+    <link rel="stylesheet" href="styles/style4.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-box"> 
+            <h1>Seleccione su método de pago</h1>
+            <div class="options">
+                <button id="tarjetaBtn" onclick="selectPayment('tarjeta')">
+                    <img src="img/tarjeta.png" alt="Tarjeta de Crédito">
+                    <span>Tarjeta de Débito/Crédito</span>
+                </button>
+                <button id="efectivoBtn" onclick="selectPayment('efectivo')">
+                    <img src="img/efectivo.png" alt="Pago en Efectivo">
+                    <span>Pago con Efectivo</span>
+                </button>
+            </div>
+            <button id="realizarPagoBtn" class="botonPago" onclick="realizarPago()" disabled>Realizar Pago</button>
+        </div>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+
+</html>
