@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+body {
+    font-family: 'Istok Web', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1.5rem;
+
+    &::-webkit-scrollbar{
+        -webkit-appearance: none;
+        width: 0;
+    }
+
+    &:after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(117deg, #BE93C5 0%, #8F94FB 100%);
+        height: 100vh;
+        z-index: -1;
+    }
+}
+.container {
+    padding: 2rem;
+    height: 700px;
+    width: 600px;
+    border-radius: 50px;
+    border: 1px solid black;
+    background-color: white;
+    box-shadow: 15px 15px 20px 0px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+
+    :first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+h2 {
+    font-size: large;
+}
+input::placeholder{
+    color: black;
+}
+input:focus::placeholder{
+    color:transparent;
+}
+.form-element{
+    width: 100%;
+    border: none;
+    background-color: #8F94FB;
+    padding: 20px 30px;
+    font-size: 18px;
+    border-radius: 35px;
+    margin-top: 1.9rem;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.45);
+    transition: box-shadow .2s;
+
+    &:focus{
+        outline: none;
+        box-shadow: 0 0 0 2px black;
+    }
+
+    &::-webkit-scrollbar{
+        width: 0;
+    }
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+        margin: 0
+    }
+}
+.form-checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+button{
+    background: linear-gradient(90deg, #B06AB3 0%, #EC38BC 100%);
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all .2s;
+    opacity: .70;
+
+    &:active{
+        scale: .95; 
+        background-color: darken(linear-gradient(90deg, #B06AB3 0%, #EC38BC 100%), 50%);
+    }
+    &:hover{
+        opacity: 100;
+    }
+}
+.flex {
+    display: flex;
+    justify-content:center;
+    align-content: center;
+}
+.botones{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-areas: "button1 button2";
+    column-gap: 2rem;
+}

@@ -121,6 +121,7 @@ h1 {
     display: flex;
     justify-content:center;
     align-content: center;
+    gap: 2rem;
 }
 
 input[type=checkbox]{

@@ -67,7 +67,7 @@ function filterDataHTML(categoria) {
                 <button onclick="addCarrito(${producto.id})" class="button">Agregar</button>` //CAMBIAR AQUI A LA FUNCION ONCLICK BUTON!
                 productos_view.appendChild(nuevoProducto);
             }
-            if (categoria == "Todo"){
+            if (categoria == "Todo") {
                 addDataToHTML();
             }
         });
