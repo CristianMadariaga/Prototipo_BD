@@ -3,17 +3,32 @@ let icono_carrito = document.querySelector('.icono_carrito');
 let carrito = document.querySelector('.carrito');
 let cerrar_carrito = document.querySelector('.cerrar_carrito')
 
-icono_carrito.addEventListener('click', () => {
-    if (carrito.style.right == '-100%') {
-        carrito.style.right = '0';
-    }
-    else {
-        carrito.style.right = '-100%'
-    }
-})
-cerrar_carrito.addEventListener('click', () => {
-    carrito.style.right = '-100%';
-})
+if (screen.width < 900) {
+    icono_carrito.addEventListener('click', () => {
+        if (carrito.style.right == '-120%') {
+            carrito.style.right = '0';
+        }
+        else {
+            carrito.style.right = '-120%'
+        }
+    })
+    cerrar_carrito.addEventListener('click', () => {
+        carrito.style.right = '-120%';
+    })
+
+} else {
+    icono_carrito.addEventListener('click', () => {
+        if (carrito.style.right == '-100%') {
+            carrito.style.right = '0';
+        }
+        else {
+            carrito.style.right = '-100%'
+        }
+    })
+    cerrar_carrito.addEventListener('click', () => {
+        carrito.style.right = '-100%';
+    })
+}
 
 //Traer info de productos
 let productos = null;

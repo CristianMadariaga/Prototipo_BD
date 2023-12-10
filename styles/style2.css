@@ -266,35 +266,76 @@ button {
 }
 
 /*Para hacerlo responsive */
-@media (max-width:990px) {
+@media (max-width:900px) {
+    .body{
+        height: 100svh;
+        width: auto;
+    }
     .products {
         width: 500px;
         text-align: center;
         grid-template-columns: 120px auto;
     }
-
     .column {
         &:first-child {
+            padding: 1rem;
             display: block;
             overflow: auto;
         }
 
         &:nth-child(2) {
             display: flex;
+            flex-direction: column;
             overflow: hidden;
         }
     }
 
     h4 {
-        font-size: 10px;
+        font-size: small;
+        font-weight: lighter;
 
         &:hover {
             color: #EC38BC;
-            font-size: 11px;
+            font-size: smaller;
         }
     }
 
     h1 {
-        font-size: 15px;
+        font-size: medium;
     }
+    h2 {
+        margin-bottom: -5px;
+        font-weight: 600;
+        font-size: medium;
+    }
+    
+    h3 {
+        font-weight: 400;
+        margin-bottom: -5px;
+        font-size: smaller;
+    }
+    .view_productos {
+        position: relative;
+        vertical-align: top;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 2rem;
+        gap: 2rem;
+    }
+    .item {
+        width: 150px;
+        height: 200px;
+    }
+    .carrito{
+        right: -120%;
+        height: 100dvh;
+    }
+    button{
+        scale: .55;
+        &:active {
+            scale: .45;
+    }
+}
 }

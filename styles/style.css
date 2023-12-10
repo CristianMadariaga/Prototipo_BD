@@ -131,9 +131,13 @@ input[type=checkbox]{
 }
 
 @media (max-width:992px) {
+    body{
+        height: 100dvh;
+    }
     .login-card{
         display: block;
         width: 500px;
+        height: auto;
         text-align: center;
 
         .column{
