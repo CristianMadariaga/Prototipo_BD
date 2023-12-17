@@ -132,3 +132,17 @@ button.selected:disabled {
     background-color: rgb(60, 120, 120);
 }
 
+@media screen and (max-width: 900px) {
+    .options {
+      flex-direction: column; 
+      align-items: center;
+    }
+  
+    button {
+      padding: 20px 40px;
+    }
+  
+    button img {
+      width: 50px; 
+    }
+  }
