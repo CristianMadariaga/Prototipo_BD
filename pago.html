@@ -7,8 +7,18 @@
     <link rel="stylesheet" href="styles/style3.css">
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            document.querySelector('.botonPago').addEventListener('click', function () {
-                window.location.href = 'metodo_pago.html';
+            document.querySelector('.botonPago').addEventListener('click', function (event) {
+
+                let nombre = document.getElementById('nombre').value.trim();
+                let edad = document.getElementById('edad').value.trim();
+                let comuna = document.getElementById('comuna').value.trim();
+    
+                if (nombre === '' || edad === '' || comuna === '') {
+                    alert('Por favor, complete todos los campos.');
+                    event.stopPropagation(); 
+                    return false;
+                }
+                window.location.href = 'metodo_pago.html';  
             });
         });
     </script>
@@ -38,16 +48,16 @@
                 <h1>PAGO</h1>
                 <div class="form">
                     <div class="grupo">
-                        <label for="">Nombre Completo</label>
-                        <input type="text" name="" id="">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" name="nombre" id="nombre">
                     </div>
                     <div class="grupo">
-                        <label for="">Edad</label>
-                        <input type="text" name="" id="">
+                        <label for="edad">Edad</label>
+                        <input type="text" name="edad" id="edad">
                     </div>
                     <div class="grupo">
-                        <label for="">Comuna</label>
-                        <input type="text" name="" id="">
+                        <label for="comuna">Comuna</label>
+                        <input type="text" name="comuna" id="comuna">
                     </div>
                 </div>
                 <div class="return">

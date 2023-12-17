@@ -13,8 +13,8 @@ function selectPayment(paymentType) {
 
 function realizarPago() {
     if (selectedPayment) {
-        window.location.href = 'fin_pago.html'; // Redirige a la página de Fin del Pago
+        window.location.href = 'fin_pago.html'; 
     } else {
-        alert('Seleccione un método de pago antes de realizar el pago.'); // Opcional: Puedes mantener esta alerta si lo deseas
+        alert('Seleccione un método de pago antes de realizar el pago.'); 
     }
 }
